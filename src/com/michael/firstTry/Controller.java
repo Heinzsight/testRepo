@@ -32,6 +32,15 @@ public class Controller {
                               If I were to leave it blank the class would only be accessable to the classes inside it's package. (remember the standard
                               file structure for java is project name > package > class)
 
+       Hash Map - Stores information as key and value pairs. You can use these commands to manipulate the information held in a hash map:
+                a. put - adds information to the hash
+                b. remove - removes information from the hash
+                c. get - retrieves the information from the hash based off of a value you are trying to find
+                Note: if you try and put a value or a key value into a hash that is already included in the hast...that new key or value for the key
+                will be overridden!
+                d. containsKey - will help you determine if there is already that key value in the hash
+                e. containsValue - will help you determine if there is already that Value for the key in the hash
+
        static - when a variable is declared static that means it will only be created once no matter how many objects of the class (instances) are
                 created. So if say you declared a variable called count in a class and used the static keyword, all the objects that are made from
                 that class will SHARE that count variable and its value
@@ -123,13 +132,33 @@ public class Controller {
 
     public static void main(String[] args)
     {
-        System.out.println("Hello World!");
+        /*System.out.println("Hello World!");
 
         Scanner userInput = new Scanner(System.in); //initializing a Scanner class object to get user input with the line directly below this one
         System.out.println(userInput.nextLine());
 
         Animal dog = new Animal(3, 75, "McGee", "Labrador Retriever");
-        System.out.println(dog.getName() + " is a " + dog.getBreed() +  " that is " +dog.getHeight() + " feet tall and " + dog.getWeight() + "lbs!");
+        System.out.println(dog.getName() + " is a " + dog.getBreed() +  " that is " +dog.getHeight() + " feet tall and " + dog.getWeight() + "lbs!");*/
+
+
+        //Rounding Numbers in Java to a specific decimal place...it isn't easy ^
+        double number = 3.14159265358979;
+        double numberRounded = Math.round(number * 100) / 100.0; //rounding to 2 decimal places
+        //double numberRounded = Math.round(number * 1000) / 1000.0; //Rounding to 3 decimal places
+        //double numberRounded = Math.round(number * 10000) / 10000.0; //Rounding to 4 decimal places
+        //double numberRounded = Math.round(number * 10000) / 100000.0; //Rounding to 5 decimal places and so on
+
+        System.out.println(numberRounded);
+
+        /* To round numbers you can use the Math.round() function which (you don't have to
+         import the Math file by the way) will round a number to the nearest WHOLE integer.
+         If you want to round to a specific number of decimal places you can use the
+         Math.round function and INSIDE the parenthesis multiply the number by 100 and then
+         OUTSIDE the parenthesis divide that number by 100.0! The point 0 is important!
+         If you were to run this same code but without the .0 on the end of the 100 being
+         divided into the variable you'd get 3.0 and not your desired 3.14! */
+
+        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
     }
